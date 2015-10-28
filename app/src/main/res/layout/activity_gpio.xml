@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.cerevo.blueninja.hyourowgan_ble_sample.GpioActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="GPIO Service"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Input"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPIO16"
+        android:id="@+id/checkBoxGPIO16"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPIO17"
+        android:id="@+id/checkBoxGPIO17"
+        android:layout_alignTop="@+id/checkBoxGPIO16"
+        android:layout_toEndOf="@+id/checkBoxGPIO16"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPIO18"
+        android:id="@+id/checkBoxGPIO18"
+        android:layout_alignTop="@+id/checkBoxGPIO17"
+        android:layout_toEndOf="@+id/checkBoxGPIO17"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPIO19"
+        android:id="@+id/checkBoxGPIO19"
+        android:layout_alignTop="@+id/checkBoxGPIO18"
+        android:layout_toEndOf="@+id/checkBoxGPIO18"
+        android:checked="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Output"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/checkBoxGPIO16"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPIO20"
+        android:id="@+id/checkBoxGPIO20"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPIO21"
+        android:id="@+id/checkBoxGPIO21"
+        android:layout_alignTop="@+id/checkBoxGPIO20"
+        android:layout_alignStart="@+id/checkBoxGPIO17"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPIO22"
+        android:id="@+id/checkBoxGPIO22"
+        android:layout_alignTop="@+id/checkBoxGPIO21"
+        android:layout_toEndOf="@+id/checkBoxGPIO21"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPIO23"
+        android:id="@+id/checkBoxGPIO23"
+        android:layout_alignTop="@+id/checkBoxGPIO22"
+        android:layout_toEndOf="@+id/checkBoxGPIO22"
+        android:checked="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read"
+        android:id="@+id/buttonRead"
+        android:layout_below="@+id/checkBoxGPIO22"
+        android:layout_toStartOf="@+id/buttonWrite"
+        android:layout_marginTop="10dp"
+        android:minWidth="96dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Write"
+        android:id="@+id/buttonWrite"
+        android:layout_alignTop="@+id/buttonRead"
+        android:layout_alignParentEnd="true"
+        android:minWidth="96dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Disconnect"
+        android:id="@+id/buttonDisconnect"
+        android:layout_above="@+id/textStatus"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:id="@+id/buttonConnect"
+        android:layout_above="@+id/buttonDisconnect"
+        android:layout_alignEnd="@+id/buttonWrite" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="---"
+        android:id="@+id/textStatus"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
