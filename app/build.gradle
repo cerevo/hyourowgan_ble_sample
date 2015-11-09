@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
     defaultConfig {
         applicationId "com.cerevo.blueninja.hyourowgan_ble_sample"
-        minSdkVersion 19
+        minSdkVersion 23
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
