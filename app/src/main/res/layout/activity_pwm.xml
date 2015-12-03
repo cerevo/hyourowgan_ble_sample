@@ -60,8 +60,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/seekBarPwm0Duty"
         android:minWidth="140dp"
-        android:max="100"
-        android:progress="50"
+        android:max="1000"
+        android:progress="500"
         android:indeterminate="false"
         android:layout_alignBottom="@+id/buttonPwm0DutyUpdate"
         android:layout_toEndOf="@+id/textView7" />
@@ -109,8 +109,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/seekBarPwm1Duty"
         android:minWidth="140dp"
-        android:max="100"
-        android:progress="50"
+        android:max="1000"
+        android:progress="500"
         android:indeterminate="false"
         android:layout_alignBottom="@+id/buttonPwm1DutyUpdate"
         android:layout_alignStart="@+id/editPwm1Clock" />

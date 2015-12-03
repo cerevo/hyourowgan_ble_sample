@@ -184,11 +184,11 @@ public class PwmActivity extends AppCompatActivity {
 
                         mEditPwm0Clock.setText("1000");
                         mEditPwm1Clock.setText("1000");
-                        mTextPwm0Duty.setText("50%");
-                        mTextPwm1Duty.setText("50%");
+                        mTextPwm0Duty.setText("50.0%");
+                        mTextPwm1Duty.setText("50.0%");
 
-                        mSeekBarPwm0Duty.setProgress(50);
-                        mSeekBarPwm1Duty.setProgress(50);
+                        mSeekBarPwm0Duty.setProgress(500);
+                        mSeekBarPwm1Duty.setProgress(500);
                         break;
                     case BLE_SCANNING:
                     case BLE_WRITEING:
@@ -225,8 +225,8 @@ public class PwmActivity extends AppCompatActivity {
         super.onStart();
         mCheckBoxPwm0Enable.setChecked(false);
         mCheckBoxPwm1Enable.setChecked(false);
-        mSeekBarPwm0Duty.setProgress(50);
-        mSeekBarPwm1Duty.setProgress(50);
+        mSeekBarPwm0Duty.setProgress(500);
+        mSeekBarPwm1Duty.setProgress(500);
 
         setStatus(AppState.INIT);
 
@@ -262,7 +262,7 @@ public class PwmActivity extends AppCompatActivity {
                         setStatus(AppState.BLE_WRITEING);
                         break;
                     case R.id.buttonPwm0DutyUpdate:
-                        float pwm0duty = (float)(mSeekBarPwm0Duty.getProgress() * 0.01);
+                        float pwm0duty = (float)(mSeekBarPwm0Duty.getProgress() * 0.001);
                         buff = ByteBuffer.allocate(4);
                         buff.order(ByteOrder.LITTLE_ENDIAN);
                         buff.putFloat(pwm0duty);
@@ -280,7 +280,7 @@ public class PwmActivity extends AppCompatActivity {
                         setStatus(AppState.BLE_WRITEING);
                         break;
                     case R.id.buttonPwm1DutyUpdate:
-                        float pwm1duty = (float)(mSeekBarPwm1Duty.getProgress() * 0.01);
+                        float pwm1duty = (float)(mSeekBarPwm1Duty.getProgress() * 0.001);
                         buff = ByteBuffer.allocate(4);
                         buff.order(ByteOrder.LITTLE_ENDIAN);
                         buff.putFloat(pwm1duty);
@@ -332,7 +332,7 @@ public class PwmActivity extends AppCompatActivity {
                 default:
                     return;
             }
-            tv.setText(String.format("%d%%", seekBar.getProgress()));
+            tv.setText(String.format("%5.1f%%", (double)seekBar.getProgress() / 10));
         }
 
         @Override
